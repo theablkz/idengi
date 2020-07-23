@@ -1,0 +1,79 @@
+$border-radius: 0.8rem;
+$primary-font: 'PT Root UI';
+
+$text-color: #2d3e50;
+$blue-color: #004B94;
+$blue-color-hover: #004a94d0;
+$blue-color-active: #013c77;
+$orange-color: #FF7B08;
+$orange-color-hover: #FF983F;
+$orange-color-active: #C45B00;
+$k24-green-color: #8FC030;
+$green-color: #46ac4a;
+$green-light-color: #6cd970;
+$link-color: #e64c66;
+$error-color: #E63B12;
+$blue-deep-color: #2D3E50;
+$black-text-color: #3D4551;
+$gray-color: #333333;
+$active-input: #00B0FF;
+$gray-deep-color: #697382;
+$gray1-color: #aeaeae;
+$gray2-color: #bdbdbd;
+$gray3-color: #e0e0e0;
+$gray4-light-color: #f2f2f2;
+$gray5-super-light-color: #fafafa;
+$white-color: #ffffff;
+
+// indents
+$indent-block: 4rem;
+$indent-lead: 2.4rem;
+$indent-h0: 4.8rem;
+$indent-h1: 4rem;
+$indent-h2: 3.2rem;
+$indent-h3: 2.4rem;
+$indent-h4: 1.6rem;
+$indent-h5: 0.8rem;
+$indent-header-padding: 0;
+
+.indent-menu_top-h1 {
+  margin-top: $indent-h1;
+}
+
+.indent_bottom-h2 {
+  margin-bottom: $indent-h2;
+}
+
+.indent_bottom-h3 {
+  margin-bottom: $indent-h3;
+}
+.indent_bottom-h4 {
+  margin-bottom: $indent-h4;
+}
+.indent_bottom-h5 {
+  margin-bottom: $indent-h5;
+}
+
+.color_gray4 {
+  color: $gray2-color;
+}
+
+.color_white {
+  color: $white-color;
+}
+
+.indent-header-padding {
+  padding: 0 $indent-h3;
+}
+
+@media only screen and (max-width: 768px) {
+  .indent-header-padding {
+    padding: 0 $indent-h4;
+  }
+
+  .indent-menu_top-h1 {
+    &-mob {
+      margin-top: 0;
+    }
+  }
+}

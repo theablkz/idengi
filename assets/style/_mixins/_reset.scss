@@ -1,0 +1,408 @@
+@import "values";
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+
+html {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
+  color: $black-text-color;
+  height: 100%;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
+  color: inherit;
+  height: 100%;
+}
+
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+
+h1 {
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 4rem; /* identical to box height, or 125% */
+  color: inherit;
+  font-weight: bold;
+  
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: inherit;
+  
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.2rem; /* identical to box height, or 109% */
+  color: inherit;
+  @media screen and (max-width: 767px) {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+h4 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: inherit;
+
+}
+h5 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: inherit;
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: inherit;
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: inherit;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+
+    p {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button {
+  width: 100%;
+  background: $blue-color;
+  border-radius: $border-radius;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2;
+  color: $white-color;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+  &:hover {
+    background-color: $blue-color-hover;
+  }
+  &:active {
+    background-color: $blue-color-active;
+  }
+  &:focus {
+    outline: 0;
+    outline: none;
+  }
+  &:disabled {
+    background: #e0e0e0;
+    color: #aeaeae;
+  }
+}
+.button_yellow {
+  background-color: orange;
+}
+.button_red {
+  background-color: $error-color;
+}
+
+.text-color_green {
+  color: $green-color;
+}
+
+img, svg {
+  display: block;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+input,
+select {
+  width: 100%;
+  background-color: #EEEEEE;
+  border: 1px solid $gray3-color;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  color: $black-text-color;
+  min-height: 4.7rem;
+  &.input-error {
+    border-color: $error-color;
+  }
+  &:focus {
+    outline: 0;
+    border: 0.1px solid $active-input;
+  }
+  &.email {
+    text-transform: none;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
+}
+textarea{
+  padding: 1rem 1.6rem;
+  border: 1px solid $gray3-color;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  resize: none;
+}
+select {
+  font-size: 1.6rem;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
+}
+.field {
+  position: relative;
+  background: white;
+  
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 2.4rem 0;
+
+  &__label {
+    background-color: inherit;
+    margin: .4rem auto auto 1.6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    transition: all 0.2s;
+    touch-action: manipulation;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    &:hover{
+      cursor: text;
+    }
+  }
+  &__input{
+    transition: all 0.2s;
+    touch-action: manipulation;
+    padding-top: 1.6rem;
+    &.input-to-uppercase{
+      text-transform: uppercase;
+    }
+  }
+  &__select{
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+
+  &__input::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+  &__input:placeholder-shown + .field__label {
+    bottom: 0;
+    font-size: 1.6rem;
+    margin: auto auto auto 1.6rem;
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+  }
+  &__input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  &__input:focus{
+    border: 1px solid $active-input;
+  }
+  &__input:focus + .field__label {
+    bottom: 100%;
+    font-size: 1.4rem;
+    color: $active-input;
+    margin: .4rem auto auto 1.6rem;
+  }
+  &__bank-logo{
+    position: absolute;
+    margin: auto 0.8rem auto auto;
+    width: 7rem;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+  }
+
+  &_error{
+    animation: shakeAnimation .3s 1;
+
+    .field__input{
+      border: 1px solid $error-color;
+    }
+    .field__select{
+      border: 1px solid $error-color;
+      color: $error-color;
+    }
+    .field__label{
+      color: $error-color
+    }
+  }
+
+  &__warning, &__error{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    top: 100%;
+    padding-left: 2.2rem;
+    left: 0;
+    margin-top: .4rem;
+    z-index: 2;
+    p{
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+  &__warning{
+    background-image: url("~assets/image/icons/warning.svg");
+    p{
+      color: $orange-color;
+    }
+  }
+  &__error{
+    background-image: url("~assets/image/icons/error.svg");
+    p{
+      color: $error-color;
+    }
+  }
+
+  &_white{
+    background: white;
+    input, select{
+      background-color: white;
+      padding: 1rem 1.2rem;
+    }
+    .field__label {
+      margin: auto auto auto 0.8rem;
+      bottom: 100%;
+      padding: 0 0.8rem;
+    }
+    .field__input:placeholder-shown + .field__label {
+      margin: auto auto auto .4rem;
+    }
+    .field__input:focus + .field__label {
+      margin: auto auto auto 0.8rem;
+    }
+  }
+}
+
+.rate-change {
+  &-red {
+    color: $error-color;
+  }
+  &-null {
+    color: $gray1-color;
+  }
+  &-green {
+    color: $green-color;
+  }
+}
+
+.form-input-box__error {
+  position: absolute;
+  bottom: -2rem;
+  display: flex;
+  align-items: center;
+  .error-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $error-color;
+  }
+}
+
+.input-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $blue-color;
+  margin-bottom: 0.8rem;
+}
+
+@keyframes shakeAnimation {
+  0% {transform: translateX(0px)}
+  10% {transform: translateX(-10px)}
+  30% {transform: translateX(10px)}
+  50% {transform: translateX(-7px)}
+  70% {transform: translateX(7px)}
+  80% {transform: translateX(-4px)}
+  90% {transform: translateX(4px)}
+  to {transform: translateX(0)}
+}
